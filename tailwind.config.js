@@ -12,6 +12,9 @@ export default {
         '38': '38',
         '61': '61',
         '100': '100'
+      },
+      screens: {
+        'tall': { 'raw': '(min-height: 1180px)' },
       }
     },
   },
