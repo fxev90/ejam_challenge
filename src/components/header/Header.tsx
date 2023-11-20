@@ -5,8 +5,9 @@ import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
 import { PiTruck, PiSealCheckLight } from "react-icons/pi"
 import { FaRegHeart } from "react-icons/fa";
 import FluentArrowSyncCheckMark from "@/assets/fluent_arrow_sync_checkmark.svg";
-import image1 from "@/assets/image1.png";
-import image2 from "@/assets/image2.png";
+import image3 from "@/assets/image3svg.svg";
+import image4 from "@/assets/antivirus.svg";
+import image2svg from "@/assets/image2svg.svg";
 
 interface HeaderProps {
 	[key: string]: string | JSX.Element
@@ -40,10 +41,9 @@ export const Header: React.FC<HeaderProps> = () => {
 		setActiveSlide((prevSlide) => (prevSlide + 1) % carouselItems.length);
 	};
 	return (
-		<header>
+		<header className=''>
 
-			<div className="bg-[#252F3D] text-white p-4 flex justify-around items-center">
-
+			<div className="md:hidden bg-[#252F3D] text-white p-4 flex justify-around items-center ">
 				<button onClick={handlePrevSlide}>
 					<MdArrowBackIosNew size={24} color="white" />
 				</button>
@@ -57,17 +57,29 @@ export const Header: React.FC<HeaderProps> = () => {
 					<MdArrowForwardIos size={24} color="white" />
 				</button>
 			</div>
-			<div className="bg-white p-6 mt-2 flex justify-between items-center">
-				{/* Icon on the left */}
-				<div>
-					<img src={image2} />
+
+			<div className="hidden md:block bg-[#252F3D] text-white p-4 flex justify-around items-center ">
+
+
+				<div className="flex justify-between items-center p4 max-w-[1245px] m-auto">
+					{carouselItems.map((item, index) => (
+						<div key={index} className="flex items-center text-white">
+							<span className="mr-[5px]">{item.icon}</span>
+						<h4 className='text-[0.6rem]'>{item.text}</h4>
+						</div>
+					))}
 				</div>
 
-				{/* Content in the middle (you can add other content here) */}
 
-				{/* Icons on the right */}
+			</div>
+
+			<div className="bg-white p-6 mt-2 flex justify-between items-center max-w-[1245px] m-auto">
 				<div >
-					<img src={image1} />
+					<img className='h-6 md:h-12' src={image2svg} />
+				</div>
+				<div className='flex gap-4 h-4 md:h-8'>
+					<img src={image3} />
+					<img src={image4} />
 				</div>
 			</div>
 		</header>
