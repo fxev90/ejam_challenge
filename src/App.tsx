@@ -25,7 +25,7 @@ function App() {
   return (
     <div style={{ fontFamily: 'Manrope, sans-serif' }}>
       <Header />
-      <div className="itemSection bg-white max-[768px]:bg-gradient-to-b from-[#f8f8f8] to-[#ffffff] md:px-5 md:mb-10 max-w-[1245px] mx-auto tall:mb-48">
+      <div className="itemSection bg-white max-[768px]:bg-gradient-to-b from-[#f8f8f8] to-[#ffffff] md:px-5 md:mb-10 max-w-[1245px] mx-auto tall:mb-16">
         <Title title="Wait ! your order in progress." smallSubtitle="Lorem ipsum dolor sit amet, consectetur adipiscing" />
         <StepSequence currentStep={2} titles={titles} />
         <div className="p-8 grid md:grid-cols-2 md:gap-5 md:bg-[#f8f8f8]  mx-auto">
