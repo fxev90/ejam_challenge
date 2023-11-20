@@ -12,7 +12,7 @@ const StepSequence: React.FC<StepSequenceProps> = ({ currentStep, titles }) => {
 	const steps = [1, 2, 3, 4];
 
 	return (
-		<div className="flex justify-between my-6 mx-8">
+		<div className="flex justify-between my-6 mx-8 lg:text-lg">
 
 			{steps.map((step, index) => (
 				<div key={step} className="flex flex-col md:flex-row-reverse items-center mt-2">
@@ -23,10 +23,10 @@ const StepSequence: React.FC<StepSequenceProps> = ({ currentStep, titles }) => {
 						className={`flex text-[#2C7EF8] items-center justify-center w-5 h-5 md:w-10 md:h-10 rounded-full border-[2px]
 						${index < currentStep
 								? 'text-white border-green-500 bg-green-500'
-								: index < currentStep - 1 
-								?	'border-[#2C7EF8]' 
-								:  'border-[#2C7EF8]'
-						} 
+								: index < currentStep - 1
+									? 'border-[#2C7EF8]'
+									: 'border-[#2C7EF8]'
+							} 
 				${index === currentStep && 'bg-[#2C7EF8] text-white'}
 				`}
 					>
