@@ -1,6 +1,5 @@
 import { FaStar } from "react-icons/fa";
 
-
 type HeroSectionpProps = {
 	image5: string,
 	star: number,
@@ -10,6 +9,7 @@ type HeroSectionpProps = {
 
 
 export const HeroSection: React.FC<HeroSectionpProps> = function ({ image5, handleClick, rating }) {
+
 	return (<>
 
 		<div className="grid grid-cols-3 gap-3 md:gap-0 py-4 md:hidden">
@@ -41,7 +41,7 @@ export const HeroSection: React.FC<HeroSectionpProps> = function ({ image5, hand
 		<div className="py-4 hidden md:flex">
 
 			<div className="  bg-[#2C7EF8] rounded-2xl min-w-[134px] h-[134px] flex justify-center items-center">
-				<img src={image5} alt="Product" className="h-[90%]"/>
+				<img src={image5} alt="Product" className="h-[90%]" />
 			</div>
 
 			<div className=" items-center justify-center pl-4">
@@ -50,13 +50,16 @@ export const HeroSection: React.FC<HeroSectionpProps> = function ({ image5, hand
 					{[1, 2, 3, 4, 5].map(star => <FaStar key={star} onClick={() => handleClick(star)} className={` h-[12px] w-[12px] cursor-pointer text-xl ${star <= rating ? 'text-yellow-500' : 'text-gray-300'}`} />)}
 				</div>
 				<div className="flex my-2">
-					<input type="checkbox" className="border rounded-full" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+						<ellipse cx="7.99996" cy="7.99999" rx="7.99996" ry="7.99999" fill="#E3EEFF" />
+						<ellipse cx="8.05925" cy="8.05899" rx="4.26664" ry="4.26666" fill="#2C7EF8" />
+					</svg>
 					<h4 className="text-xs ml-5">12 left in Stock</h4>
 
 				</div>
 				<h1 style={{
 					lineHeight: '16.8px'
-				}} className="text-left text-xs font-normal hidden md:block">Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers with a simple.</h1>
+				}} className="text-left text-xs font-normal hidden md:inline-block ">Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers with a simple.</h1>
 			</div>
 
 			<div className=" flex items-baseline justify-end mt-4">

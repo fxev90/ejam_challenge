@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.circular-checkbox {
+	position: relative;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+ }
+ 
+ .circular-checkbox input {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+ }
+ 
+ .circular-checkbox .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: 2px solid #6c6a6a; /* Border color for the circular checkbox */
+ }
+ 
+ .circular-checkbox input:checked + .checkmark {
+	background-color: rgb(59, 59, 248); /* Fill color when the checkbox is checked */
+ }

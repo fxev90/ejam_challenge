@@ -14,16 +14,16 @@ export function ReviewSection() {
 						{[1, 2, 3, 4, 5].map(star => <FaStar key={star} className="h-[12px] w-[12px] cursor-pointer text-xl text-yellow-500" />)}
 					</div>
 					<div className="flex items-center ">
-						<strong>
+						<strong className="text-[14px]">
 							Ken T.
 						</strong>
-						<HiMiniCheckBadge className="w-4 h-4 text-[#5BB59A] ml-2" /> <h4 className="text-[#5BB59A] ml-2">Verified Customer</h4>
+						<HiMiniCheckBadge className="w-4 h-4 text-[#5BB59A] ml-2" /> <h4 className="text-[#5BB59A] ml-2 text-[12px]">Verified Customer</h4>
 					</div>
 
 				</div>
 
 			</div>
-			<h1 className="mt-4">
+			<h1 className="mt-4 text-[#4D5254]">
 				“As soon as the Clarifions arrived I put one in my bedroom. This was late in the afternoon. When I went to the bedroom in the evening it smelled clean. When I went to bed I felt I could breathe better. Wonderful.”
 			</h1>
 		</div>
